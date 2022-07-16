@@ -30,9 +30,12 @@ Once the extension is installed open any of your project (go or js or java)
 
 ## Steps
 
-_Open up a dependency file_
+1. Open up a dependency file
+
 ![Opening a dependency file](images/vs1.png)
-_Search and run the command_
+
+2. Search and run the command
+
 ![Running libanalyzer](images/vs2.png)
 
 ### For more information
