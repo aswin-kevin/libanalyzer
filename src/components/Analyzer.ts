@@ -12,7 +12,9 @@ const getNpmDeps = async (data: string) => {
   let count = 1;
   showInfoDialog(`Found ${depLen} Javascript libraries`);
   for (const [key, val] of Object.entries(deps)) {
-    const version = val.match(/(?:(\d+)\.)?(?:(\d+)\.)?(?:(\d+)\.\d+)/)[0];
+    const version = val
+      .toString()
+      .match(/(?:(\d+)\.)?(?:(\d+)\.)?(?:(\d+)\.\d+)/)[0];
     const url = `https://snyk.io/vuln/npm:${key}@${version}`;
 
     const vulns = await snykParser(url);
@@ -69,10 +71,9 @@ const getGoDepsBySum = async (data: string) => {
   showInfoDialog(`Found ${depLen} Golang libraries`);
 
   for (const [key, version] of Object.entries(deps)) {
-    const url = `https://snyk.io/vuln/golang:${key.replaceAll(
-      "/",
-      "%2F"
-    )}@${version}`;
+    const url = `https://snyk.io/vuln/golang:${key
+      .split("/")
+      .join("%2F")}@${version}`;
 
     const vulns = await snykParser(url);
     deps[key] = { url, vulns, version };
@@ -104,10 +105,9 @@ const getGoDepsByMod = async (data: string) => {
   showInfoDialog(`Found ${depLen} Golang libraries`);
 
   for (const [key, version] of Object.entries(deps)) {
-    const url = `https://snyk.io/vuln/golang:${key.replaceAll(
-      "/",
-      "%2F"
-    )}@${version}`;
+    const url = `https://snyk.io/vuln/golang:${key
+      .split("/")
+      .join("%2F")}@${version}`;
 
     const vulns = await snykParser(url);
     deps[key] = { url, vulns, version };
