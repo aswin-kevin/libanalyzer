@@ -2,7 +2,7 @@
   "name": "libanalyzer",
   "displayName": "LibAnalyzer",
   "description": "Find and fix vulnerable libraries in your project",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "AswinVenkat",
   "author": {
     "name": "Aswin Venkat",
@@ -10,6 +10,7 @@
     "url": "https://hackwithash.com"
   },
   "license": "GPLv3",
+  "icon": "images/shield.png",
   "engines": {
     "vscode": "^1.69.0"
   },
