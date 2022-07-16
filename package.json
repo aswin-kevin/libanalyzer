@@ -9,6 +9,10 @@
   "categories": [
     "Other"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aswin-kevin/libanalyzer"
+  },
   "activationEvents": [
     "onCommand:libanalyzer.checkVulnerabilities"
   ],
