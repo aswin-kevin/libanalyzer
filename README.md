@@ -25,17 +25,15 @@ Once the extension is installed open any of your project (go or js or java)
 - Open the respective dependency file _.mod or .sum or .json or .xml_
 - Press `ctrl+shift+P` if you are in windows
 - Press `cmd+shift+P` if you are in mac
-- In the top search bar search `Run libanalyzer`
+- In the top search bar type `Run libanalyzer`
 - Hit `enter` and that's it scan started
 
 ## Steps
 
 _Open up a dependency file_
-\!\[Opening a dependency file\]\(images/vs1.png\)
+![Opening a dependency file](images/vs1.png)
 _Search and run the command_
-\!\[Running libanalyzer\]\(images/vs2.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+![Running libanalyzer](images/vs2.png)
 
 ### For more information
 
