@@ -25,9 +25,18 @@ const writeToFile = (vulns: any) => {
         );
       });
   } else {
-    vscode.window.showWarningMessage(
-      `${count} vulnerable libraries found in your project`
-    );
+    vscode.workspace
+      .openTextDocument({
+        content: content + "No vulnerable libraries found",
+      })
+      .then((doc) => {
+        vscode.window.showTextDocument(doc, { preview: false });
+      })
+      .then(() => {
+        vscode.window.showInformationMessage(
+          `${count} vulnerable librarie(s) found in your project`
+        );
+      });
   }
 };
 
@@ -50,9 +59,7 @@ export function activate(context: vscode.ExtensionContext) {
           "Please open a dependencies file \nExample: packages.json or pom.xml or go.mod"
         );
       }
-
       const currentFile = vscode.window.activeTextEditor?.document.uri;
-
       vscode.workspace.openTextDocument(currentFile).then((fileData) => {
         let extenstion = vscode.window.activeTextEditor?.document.fileName;
         analyzeDeps(extenstion, fileData.getText())?.then((vulns) => {
