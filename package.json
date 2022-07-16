@@ -3,6 +3,13 @@
   "displayName": "LibAnalyzer",
   "description": "Find and fix vulnerable libraries in your project",
   "version": "0.0.1",
+  "publisher": "AswinVenkat",
+  "author": {
+    "name": "Aswin Venkat",
+    "email": "aswinrj6067@gmail.com",
+    "url": "https://hackwithash.com"
+  },
+  "license": "GPLv3",
   "engines": {
     "vscode": "^1.69.0"
   },
