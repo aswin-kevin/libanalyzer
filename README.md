@@ -1,70 +1,45 @@
-# libanalyzer README
+# libanalyzer
 
-This is the README for your extension "libanalyzer". After writing up a brief description, we recommend including the following sections.
+Lib Analyzer is a VScode extension written in javascript. It is used to detect _vulnerable libraries_ in your project.
 
-## Features
+## Language support
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+Libanalyzer supports,
 
-For example if there is an image subfolder under your extension project workspace:
+- NPM project (Javascript)
+- Maven project (Java)
+- Go project (Golang)
 
-\!\[feature X\]\(images/feature-x.png\)
+## Requirement
+
+To scan using libanalyzer you should have any one of the following dependencies file,
+
+- _go.mod_ or _go.sum_ file if your project is golang
+- _pom.xml_ file if your project is java
+- _packages.json_ file if your project is javascript
+
+## Running
+
+Once the extension is installed open any of your project (go or js or java)
+
+- Open the respective dependency file _.mod or .sum or .json or .xml_
+- Press `ctrl+shift+P` if you are in windows
+- Press `cmd+shift+P` if you are in mac
+- In the top search bar search `Run libanalyzer`
+- Hit `enter` and that's it scan started
+
+## Steps
+
+_Open up a dependency file_
+\!\[Opening a dependency file\]\(images/vs1.png\)
+_Search and run the command_
+\!\[Running libanalyzer\]\(images/vs2.png\)
 
 > Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
 
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
 ### For more information
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+- Contact me [Hackwithash](https://www.hackwithash.com)
+- Follow me on [Linkedin](https://www.linkedin.com/in/aswin-venkat-ceo/)
 
 **Enjoy!**
